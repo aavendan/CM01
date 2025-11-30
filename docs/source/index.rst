@@ -52,6 +52,11 @@ Demostración
 Mini demostración: mostrar con un código simple (Python/C) cómo cambia el tiempo de acceso por localidad
 
 
+En resumen
+==========
+
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Memoria Caché" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/692c85b7bea51fb65277fde8" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
 Bibliografía
 ============
 
