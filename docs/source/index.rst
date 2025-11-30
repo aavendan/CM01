@@ -15,9 +15,11 @@ Memoria Caché
 Introducción
 ============
 
+.. centered:: ¿Cómo decidimos lo que llevamos en nuestra mochila, cartera o bolso?
+
 .. image:: ./archivos/maleta.png
     :alt: La caché es la mochila del estudiante
-    :width: 100%
+    :width: 75%
     :align: center   
 
 
@@ -27,14 +29,10 @@ Contenido
 ¿Qué es la memoria caché?
 -------------------------
 
-La memoria caché es una pequeña porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador accede con frecuencia. Su propósito principal es reducir el tiempo de acceso a los datos y mejorar el rendimiento general del sistema. Al mantener una copia de los datos más utilizados cerca del procesador, la caché minimiza la necesidad de acceder a la memoria principal, que es más lenta.
+La memoria caché es una pequeña porción de **memoria de alta velocidad** que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. Su propósito principal es reducir el tiempo de acceso a los datos y mejorar el rendimiento general del sistema. Al mantener una copia de los datos más utilizados cerca del procesador, la caché minimiza la necesidad de acceder a la memoria principal, que es más lenta.
 
 Tipos de caché
 --------------
-
-1. **Caché de nivel 1 (L1)**: Es la caché más rápida y está integrada directamente en el procesador. Suele estar dividida en caché de instrucciones y caché de datos.
-2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
-3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
 
 Hit y Miss
 ----------
@@ -59,3 +57,5 @@ Bibliografía
 
 Provost, G. (2024). What Is Cache and How Does It Work? Retrieved from https://computer.howstuffworks.com/cache.htm
 Ruz, J. J. (2012). Estructura de Computadores, Facultad de Informática, UCM. Retrieved from https://www.fdi.ucm.es/profesor/jjruz/web2/temas/ec6.pdf#page=4.18
+GeeksforGeeks. (2025). Types of Cache. Retrieved from https://www-geeksforgeeks-org.translate.goog/system-design/types-of-cache/
+Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
