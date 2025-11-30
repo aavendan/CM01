@@ -14,7 +14,8 @@ Memoria Caché
 
 Introducción
 ============
-.. image:: ./archivos/cache.png
+
+.. image:: ./archivos/maleta.png
     :alt: La caché es la mochila del estudiante
     :width: 100%
     :align: center   
