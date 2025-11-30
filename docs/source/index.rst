@@ -15,7 +15,7 @@ Memoria Caché
 Introducción
 ============
 
-.. centered:: ¿Cómo decidimos lo que llevamos en nuestra mochila, cartera o bolso?
+.. centered:: ¿Qué criterios usamos para elegir los objetos que llevamos en nuestra mochila, cartera o bolso?
 
 .. image:: ./archivos/maleta.png
     :alt: La caché es la mochila del estudiante
@@ -29,10 +29,21 @@ Contenido
 ¿Qué es la memoria caché?
 -------------------------
 
-La memoria caché es una pequeña porción de **memoria de alta velocidad** que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. Su propósito principal es reducir el tiempo de acceso a los datos y mejorar el rendimiento general del sistema. Al mantener una copia de los datos más utilizados cerca del procesador, la caché minimiza la necesidad de acceder a la memoria principal, que es más lenta.
+Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. 
 
-Tipos de caché
---------------
+Escenarios de uso de la memoria caché
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Memoria Caché" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/692c85b7bea51fb65277fde8" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
+Tipos de caché de CPU
+^^^^^^^^^^^^^^^^^^^^^
+
+1. **Caché de nivel 1 (L1)**: Es la caché más rápida y está integrada directamente en el procesador. Suele estar dividida en caché de instrucciones y caché de datos.
+2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
+3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
 
 Hit y Miss
 ----------
@@ -51,13 +62,6 @@ Demostración
 
 Mini demostración: mostrar con un código simple (Python/C) cómo cambia el tiempo de acceso por localidad
 
-
-En resumen
-==========
-
-.. raw:: html
-
-    <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Memoria Caché" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/692c85b7bea51fb65277fde8" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 
 Bibliografía
 ============
