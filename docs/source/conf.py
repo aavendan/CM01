@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Ciencia de Datos e Inteligencia Artificial'
-copyright = '2025, Ciencia de Datos e Inteligencia Artificial'
+project = 'Organización y Arquitectura de Computadores'
+copyright = '2025, Organización y Arquitectura de Computadores'
 author = 'Allan Avendaño'
 
 release = '0.1'
