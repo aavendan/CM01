@@ -31,21 +31,34 @@ Contenido
 
 Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. Al tener estos datos cerca, la CPU puede acceder a ellos más rápidamente que si tuviera que recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD).
 
-.. centered:: ¿Cuáles son los criterios para mantener cerca un dato o una instrucción?
+.. centered:: ¿Cuál es el criterio para almacenar cerca un dato o una instrucción?
+
+Principio de localidad
+----------------------
+
+Los programas tienden a acceder a los datos y las instrucciones en la memoria siguiendo una regla empírica `90% del tiempo de ejecución utiliza sólo el 10% de su código`. Por lo tanto, un programa accede a un elemento:
 
 .. grid:: 2
 
     .. grid-item-card::  Localidad temporal 
 
-        Tendencia a acceder repetidamente a los mismos datos o instrucciones en un **corto tiempo**. 
+        Es probable que vuelva a acceder a ese **mismo elemento**.
         +++
-        Por ejemplo, si un programa accede a una variable o función, es probable que vuelva a acceder a ella pronto.
+        Reutilización de datos en un corto período de tiempo.
 
     .. grid-item-card::  Localidad espacial
 
-        Tendencia a acceder a datos o instrucciones que están **físicamente cerca** unos de otros en la memoria. 
+        Es probable que acceda a los **elementos cercanos**.
         +++
-        Por ejemplo, si un programa accede a un elemento de un arreglo, es probable que acceda a los elementos cercanos en un futuro próximo.
+        Acceso a datos cercanos en la memoria.
+
+Funcionamiento de la caché
+--------------------------
+
+.. raw:: html
+
+    <a href="https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770"><img src="https://www.researchgate.net/profile/Paul-Bilokon/publication/373822770/figure/fig2/AS:11431281187754656@1694402192962/Flowchart-of-a-memory-request-showing-cache-hit-and-miss.ppm" alt="Flowchart of a memory request showing cache hit and miss."/></a>
+    Figure 2: Flowchart of a memory request showing cache hit and miss.
 
 Demostración
 ============
@@ -131,3 +144,4 @@ Referencias
 * GeeksforGeeks. (2025). Types of Cache. Retrieved from https://www-geeksforgeeks-org.translate.goog/system-design/types-of-cache/
 * Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
 * Castillo, J. A. (2022). Qué es la memoria caché L1, L2 y L3 y cómo funciona. Retrieved from https://www.profesionalreview.com/2019/05/02/memoria-cache-l1-l2-y-l3/
+* C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate. Available from: https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770 [accessed 1 Dec 2025]
