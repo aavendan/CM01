@@ -31,19 +31,8 @@ Contenido
 
 Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. 
 
-Escenarios de uso de la memoria caché
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Memoria Caché" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/692c85b7bea51fb65277fde8" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-
-Tipos de caché de CPU
-^^^^^^^^^^^^^^^^^^^^^
-
-1. **Caché de nivel 1 (L1)**: Es la caché más rápida y está integrada directamente en el procesador. Suele estar dividida en caché de instrucciones y caché de datos.
-2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
-3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
+Niveles de caché de CPU
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Hit y Miss
 ----------
@@ -57,11 +46,75 @@ Hit y Miss
 Aplicaciones actuales
 ---------------------
 
+.. raw:: html
+
+    <div style="width: 100%;"> hello </div>
+
 Demostración
 ============
 
-Mini demostración: mostrar con un código simple (Python/C) cómo cambia el tiempo de acceso por localidad
+En el siguiente ejemplo, mediremos el tiempo de acceso a cada uno de los elementos de un arreglo grande (N=10,000,000) de enteros.
 
+.. code-block:: python3
+
+    import time
+    import numpy as np
+
+    N = 10_000_000
+    a = np.zeros(N, dtype=np.int32)
+
+Alta localidad
+--------------
+
+Primero, accediendo secuencialmente (alta localidad) a los elementos del arreglo:
+
+.. code-block:: python3
+
+    # Acceso secuencial (alta localidad)
+    start = time.time()
+    s = 0
+    for i in range(N):
+        s += a[i]
+    end = time.time()
+
+    time_difference = end - start
+
+    print(f"Secuencial: {time_difference}")
+
+.. code-block:: command
+
+    Secuencial: 5.440715789794922
+
+
+Baja localidad
+--------------
+
+Luego, accediendo aleatoriamente (baja localidad) a los elementos del arreglo:
+
+.. code-block:: python3
+
+    # Acceso aleatorio (baja localidad)
+    indices = np.random.randint(0, N, N)
+    start = time.time()
+    s = 0
+    for i in indices:
+        s += a[i]
+    end = time.time()
+
+    time_difference = end - start
+
+    print(f"Aleatorio: {time_difference}")
+
+.. code-block:: command
+    
+    Aleatorio: 7.216441869735718
+
+Conclusiones
+------------
+
+- La memoria caché mejora significativamente el rendimiento del acceso a datos cuando hay alta localidad.
+- Los accesos aleatorios resultan en más fallos de caché, lo que ralentiza la ejecución.
+- La optimización del acceso a datos es crucial para el rendimiento de las aplicaciones.
 
 Bibliografía
 ============
