@@ -178,6 +178,7 @@ Actividad autónoma
 
 1. Revise el sitio de `Información general sobre el almacenamiento en caché <https://aws.amazon.com/es/caching/>`_
 2. Elabore un mapa conceptual con tres escenarios de aplicación donde la gestión eficiente de la memoria caché sea crítica para el rendimiento del sistema.
+3. Presente sus conclusiones en el foro de discusión de la semana.
 
 Referencias
 ===========
