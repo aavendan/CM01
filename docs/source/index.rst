@@ -15,7 +15,7 @@ Memoria Caché
 Introducción
 ============
 
-.. centered:: ¿Qué criterios usamos para elegir los objetos que llevamos en nuestra mochila, cartera o bolso?
+.. centered:: ¿Cuáles criterios usamos para elegir lo que llevamos en nuestra mochila, cartera o bolso?
 
 .. figure:: ./archivos/maleta.png
     :alt: La caché es la mochila del estudiante
@@ -35,7 +35,7 @@ Es una porción de memoria de alta velocidad que almacena temporalmente datos e 
 Principio de localidad
 ----------------------
 
-Los programas tienden a acceder a los datos y las instrucciones en la memoria siguiendo una regla empírica `90% del tiempo de ejecución utiliza sólo el 10% de su código`. Por lo tanto, un programa accede a un elemento:
+Los programas tienden seguir una regla empírica `90% del tiempo de ejecución utiliza sólo el 10% de su código`, que se traduce en dos tipos de localidad:
 
 .. grid:: 2
 
@@ -50,7 +50,13 @@ Los programas tienden a acceder a los datos y las instrucciones en la memoria si
 Funcionamiento de la caché
 --------------------------
 
-Cuando la CPU necesita leer o escribir datos, primero verifica si esos datos están en la caché *(cache hit)*. Si los datos están presentes, la CPU los utiliza directamente desde la caché, lo que es mucho más rápido. Si los datos no están en la caché *(cache miss)*, la CPU debe recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD), lo que lleva más tiempo. Luego, esos datos se almacenan en la caché para futuros accesos. El proceso se ilustra en la siguiente figura:
+Cuando la CPU necesita leer o escribir datos, primero verifica si esos datos están en la caché *(cache hit)*. 
+
+* Si los datos están presentes, la CPU los utiliza directamente desde la caché, lo que es mucho más rápido. 
+* Si los datos no están en la caché *(cache miss)*, la CPU debe recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD), lo que lleva más tiempo. Luego, esos datos se almacenan en la caché para futuros accesos. 
+
+
+El proceso se ilustra en la siguiente figura:
 
 .. figure:: https://www.researchgate.net/profile/Paul-Bilokon/publication/373822770/figure/fig2/AS:11431281187754656@1694402192962/Flowchart-of-a-memory-request-showing-cache-hit-and-miss.ppm
    :figwidth: 50%
@@ -58,6 +64,11 @@ Cuando la CPU necesita leer o escribir datos, primero verifica si esos datos est
 
    Fuente: `C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate <https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770>`_
 
+Tipos de caché
+--------------
+
+Aplicaciones actuales
+---------------------
 
 Demostración
 ============
