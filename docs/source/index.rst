@@ -176,9 +176,10 @@ Conclusiones
 Actividad autónoma
 ==================
 
-1. Revise el sitio de `Información general sobre el almacenamiento en caché <https://aws.amazon.com/es/caching/>`_
-2. Elabore un mapa conceptual con tres escenarios de aplicación donde la gestión eficiente de la memoria caché sea crítica para el rendimiento del sistema.
-3. Presente sus conclusiones en el foro de discusión de la semana.
+1. Revise el sitio de `Información general sobre el almacenamiento en caché <https://aws.amazon.com/es/caching/>`_.
+2. Seleccione un servicio de almacenamiento en caché ofrecido por AWS (por ejemplo, Amazon ElastiCache).
+3. Elabore un mapa conceptual resumiendo las características, beneficios y casos de uso del servicio seleccionado.
+4. Presente sus conclusiones en el foro de discusión de la semana.
 
 Referencias
 ===========
