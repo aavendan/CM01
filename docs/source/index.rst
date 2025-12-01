@@ -90,6 +90,7 @@ El almacenamiento en caché es una tecnología basada en el subsistema de memori
      - Pentium G4560: 3 MB compartidos  
        AMD EPYC 9754: 384 MB (32 MB por chiplet de 8 núcleos)
 
+En la siguiente figura se ilustran los diferentes niveles de caché en relación con la CPU y la memoria principal:
 
 .. figure:: https://miro.medium.com/v2/resize:fit:750/format:webp/0*YcgYk__yJxbKTb0p.jpeg
    :figwidth: 50%
