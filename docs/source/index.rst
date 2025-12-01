@@ -159,19 +159,18 @@ Realice las mediciones para diferente tamaños de muestras y grafique los result
     plt.title('Comparación de tiempos de acceso a memoria')
     plt.show()
 
-En el grafico resultante, podemos observar la diferencia significativa en los tiempos de acceso entre los dos métodos.
+En el gráfico resultante, podemos observar la diferencia significativa en los tiempos de acceso entre los dos métodos.
 
 .. figure:: ./archivos/comparacion.png
     :alt: Comparación de tiempos de acceso a memoria
     :figwidth: 50%
     :align: center      
 
-Conclusiones
-------------
+.. dropdown:: Conclusiones
 
-- La memoria caché mejora significativamente el rendimiento del acceso a datos cuando hay alta localidad.
-- Los accesos aleatorios resultan en más fallos de caché, lo que ralentiza la ejecución.
-- La optimización del acceso a datos es crucial para el rendimiento de las aplicaciones.
+    - La memoria caché mejora significativamente el rendimiento del acceso a datos cuando hay alta localidad.
+    - Los accesos aleatorios resultan en más fallos de caché, lo que ralentiza la ejecución.
+    - La optimización del acceso a datos es crucial para el rendimiento de las aplicaciones.
 
 Actividad autónoma
 ==================
