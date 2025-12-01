@@ -19,7 +19,7 @@ Introducción
 
 .. image:: ./archivos/maleta.png
     :alt: La caché es la mochila del estudiante
-    :width: 75%
+    :width: 50%
     :align: center   
 
 
@@ -29,26 +29,8 @@ Contenido
 ¿Qué es la memoria caché?
 -------------------------
 
-Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. 
+Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia, con el fin de reducir el tiempo de acceso a la memoria principal (RAM) y mejorar el rendimiento general del sistema. 
 
-Niveles de caché de CPU
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Hit y Miss
-----------
-
-¿Cómo acelera la ejecución? 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-¿Qué pasa cuando falla?
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Aplicaciones actuales
----------------------
-
-.. raw:: html
-
-    <div style="width: 100%;"> hello </div>
 
 Demostración
 ============
@@ -126,10 +108,11 @@ Conclusiones
 - Los accesos aleatorios resultan en más fallos de caché, lo que ralentiza la ejecución.
 - La optimización del acceso a datos es crucial para el rendimiento de las aplicaciones.
 
-Bibliografía
-============
+Referencias
+===========
 
 * Provost, G. (2024). What Is Cache and How Does It Work? Retrieved from https://computer.howstuffworks.com/cache.htm
 * Ruz, J. J. (2012). Estructura de Computadores, Facultad de Informática, UCM. Retrieved from https://www.fdi.ucm.es/profesor/jjruz/web2/temas/ec6.pdf#page=4.18
 * GeeksforGeeks. (2025). Types of Cache. Retrieved from https://www-geeksforgeeks-org.translate.goog/system-design/types-of-cache/
 * Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
+* Castillo, J. A. (2022). Qué es la memoria caché L1, L2 y L3 y cómo funciona. Retrieved from https://www.profesionalreview.com/2019/05/02/memoria-cache-l1-l2-y-l3/
