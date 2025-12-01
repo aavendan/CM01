@@ -29,8 +29,23 @@ Contenido
 ¿Qué es la memoria caché?
 -------------------------
 
-Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia, con el fin de reducir el tiempo de acceso a la memoria principal (RAM) y mejorar el rendimiento general del sistema. 
+Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. Al tener estos datos cerca, la CPU puede acceder a ellos más rápidamente que si tuviera que recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD).
 
+.. centered:: ¿Cuáles son los criterios para mantener cerca un dato o una instrucción?
+
+.. grid:: 2
+
+    .. grid-item-card::  Localidad temporal 
+
+        Tendencia a acceder repetidamente a los mismos datos o instrucciones en un **corto tiempo**. 
+        +++
+        Por ejemplo, si un programa accede a una variable o función, es probable que vuelva a acceder a ella pronto.
+
+    .. grid-item-card::  Localidad espacial
+
+        Tendencia a acceder a datos o instrucciones que están **físicamente cerca** unos de otros en la memoria. 
+        +++
+        Por ejemplo, si un programa accede a un elemento de un arreglo, es probable que acceda a los elementos cercanos en un futuro próximo.
 
 Demostración
 ============
