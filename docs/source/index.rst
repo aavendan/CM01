@@ -59,55 +59,62 @@ En el siguiente ejemplo, mediremos el tiempo de acceso a cada uno de los element
 
     import time
     import numpy as np
+    import matplotlib.pyplot as plt 
 
     N = 10_000_000
     a = np.zeros(N, dtype=np.int32)
 
-Alta localidad
---------------
+Alta localidad y baja localidad
+-------------------------------
 
-Primero, accediendo secuencialmente (alta localidad) a los elementos del arreglo:
+Mediremos el tiempo que tarda en acceder a los elementos del arreglo. En el primer caso, accederemos secuencialmente (alta localidad) con la función `sequential_access`, y en el segundo caso, accederemos de manera aleatoria (baja localidad) con la función `random_access`.
 
 .. code-block:: python3
 
     # Acceso secuencial (alta localidad)
-    start = time.time()
-    s = 0
-    for i in range(N):
-        s += a[i]
-    end = time.time()
+    def sequential_access():
 
-    time_difference = end - start
+        start = time.time()
+        s = 0
+        for i in range(N):
+            s += a[i]
+        end = time.time()
+        
+        return end - start
 
-    print(f"Secuencial: {time_difference}")
+    # Acceso aleatorio (baja localidad)
+    def random_access():
 
-.. code-block:: command
+        indices = np.random.randint(0, N, N)
+        start = time.time()
+        s = 0
+        for i in indices:
+            s += a[i]
+        end = time.time()
+        
+        return end - start
 
-    Secuencial: 5.440715789794922
-
-
-Baja localidad
---------------
-
-Luego, accediendo aleatoriamente (baja localidad) a los elementos del arreglo:
+Tomaremos 10 mediciones para cada tipo de acceso y graficaremos los resultados en un diagrama de cajas.
 
 .. code-block:: python3
 
-    # Acceso aleatorio (baja localidad)
-    indices = np.random.randint(0, N, N)
-    start = time.time()
-    s = 0
-    for i in indices:
-        s += a[i]
-    end = time.time()
-
-    time_difference = end - start
-
-    print(f"Aleatorio: {time_difference}")
-
-.. code-block:: command
+    # Número de muestras
+    samples = 10
     
-    Aleatorio: 7.216441869735718
+    # Medición de tiempos de acceso secuencial
+    seq_times = [sequential_access() for _ in range(samples)]
+    rand_times = [random_access() for _ in range(samples)]
+
+    # Graficar resultados
+    plt.boxplot([seq_times, rand_times], labels=['Secuencial', 'Aleatorio'])
+    plt.ylabel('Tiempo de acceso (segundos)')
+    plt.title('Comparación de tiempos de acceso a memoria')
+    plt.show()
+
+.. image:: ./archivos/comparacion.png
+    :alt: Comparación de tiempos de acceso a memoria
+    :width: 75%
+    :align: center      
 
 Conclusiones
 ------------
@@ -119,7 +126,7 @@ Conclusiones
 Bibliografía
 ============
 
-Provost, G. (2024). What Is Cache and How Does It Work? Retrieved from https://computer.howstuffworks.com/cache.htm
-Ruz, J. J. (2012). Estructura de Computadores, Facultad de Informática, UCM. Retrieved from https://www.fdi.ucm.es/profesor/jjruz/web2/temas/ec6.pdf#page=4.18
-GeeksforGeeks. (2025). Types of Cache. Retrieved from https://www-geeksforgeeks-org.translate.goog/system-design/types-of-cache/
-Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
+* Provost, G. (2024). What Is Cache and How Does It Work? Retrieved from https://computer.howstuffworks.com/cache.htm
+* Ruz, J. J. (2012). Estructura de Computadores, Facultad de Informática, UCM. Retrieved from https://www.fdi.ucm.es/profesor/jjruz/web2/temas/ec6.pdf#page=4.18
+* GeeksforGeeks. (2025). Types of Cache. Retrieved from https://www-geeksforgeeks-org.translate.goog/system-design/types-of-cache/
+* Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
