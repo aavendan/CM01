@@ -101,11 +101,6 @@ En la siguiente figura se ilustran los diferentes niveles de caché en relación
 
 **Nota:** Algunos sistemas incluyen caché L4, que es aún más grande y lenta, pero menos común.
 
-Aplicaciones actuales
----------------------
-
-
-
 Demostración
 ============
 
