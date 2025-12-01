@@ -101,10 +101,10 @@ En la siguiente figura se ilustran los diferentes niveles de caché en relación
 
 **Nota:** Algunos sistemas incluyen caché L4, que es aún más grande y lenta, pero menos común.
 
-Demostración
-============
+Actividad práctica
+==================
 
-En el siguiente ejemplo, mediremos el tiempo de acceso a cada uno de los elementos de un arreglo grande (N=10,000,000) de enteros.
+Utilice el siguiente código en Python para observar el impacto de la localidad en el rendimiento del acceso a memoria.
 
 .. code-block:: python3
 
@@ -112,17 +112,11 @@ En el siguiente ejemplo, mediremos el tiempo de acceso a cada uno de los element
     import numpy as np
     import matplotlib.pyplot as plt 
 
+    # Tamaño del arreglo grande (N=10,000,000) de enteros
     N = 10_000_000
     a = np.zeros(N, dtype=np.int32)
 
-Alta localidad y baja localidad
--------------------------------
-
-Mediremos el tiempo que tarda en acceder a cada uno de los elementos del arreglo. En el primer caso, accederemos secuencialmente (alta localidad) con la función `sequential_access`, y en el segundo caso, accederemos de manera aleatoria (baja localidad) con la función `random_access`.
-
-.. code-block:: python3
-
-    # Acceso secuencial (alta localidad)
+    # Accederemos secuencialmente (alta localidad) a cada elemento del arreglo
     def sequential_access():
 
         start = time.time()
@@ -133,7 +127,7 @@ Mediremos el tiempo que tarda en acceder a cada uno de los elementos del arreglo
         
         return end - start
 
-    # Acceso aleatorio (baja localidad)
+    # Accederemos aleatoriamente (baja localidad) a cada elemento del arreglo
     def random_access():
 
         indices = np.random.randint(0, N, N)
@@ -148,12 +142,12 @@ Mediremos el tiempo que tarda en acceder a cada uno de los elementos del arreglo
 Pruebas y resultados
 --------------------
 
-Tomaremos 10 mediciones para cada tipo de acceso y graficaremos los resultados en un diagrama de cajas.
+Realice las mediciones para diferente tamaños de muestras y grafique los resultados en un diagrama de cajas.
 
 .. code-block:: python3
 
     # Número de muestras
-    samples = 10
+    samples = # Ingrese el número de muestras aquí
     
     # Medición de tiempos de acceso secuencial
     seq_times = [sequential_access() for _ in range(samples)]
@@ -178,6 +172,12 @@ Conclusiones
 - La memoria caché mejora significativamente el rendimiento del acceso a datos cuando hay alta localidad.
 - Los accesos aleatorios resultan en más fallos de caché, lo que ralentiza la ejecución.
 - La optimización del acceso a datos es crucial para el rendimiento de las aplicaciones.
+
+Actividad autónoma
+==================
+
+1. Revise el sitio de `Información general sobre el almacenamiento en caché <https://aws.amazon.com/es/caching/>`_
+2. Elabore un mapa conceptual con tres escenarios de aplicación donde la gestión eficiente de la memoria caché sea crítica para el rendimiento del sistema.
 
 Referencias
 ===========
