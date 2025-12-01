@@ -92,7 +92,7 @@ El almacenamiento en caché es una tecnología basada en el subsistema de memori
 
 En la siguiente figura se ilustran los diferentes niveles de caché en relación con la CPU y la memoria principal:
 
-.. figure:: https://miro.medium.com/v2/resize:fit:750/format:webp/0*YcgYk__yJxbKTb0p.jpeg
+.. figure:: https://miro.medium.com/v2/0*YcgYk__yJxbKTb0p.jpeg
    :figwidth: 50%
    :alt: Tipos de caché 
 
