@@ -67,7 +67,7 @@ En el siguiente ejemplo, mediremos el tiempo de acceso a cada uno de los element
 Alta localidad y baja localidad
 -------------------------------
 
-Mediremos el tiempo que tarda en acceder a los elementos del arreglo. En el primer caso, accederemos secuencialmente (alta localidad) con la función `sequential_access`, y en el segundo caso, accederemos de manera aleatoria (baja localidad) con la función `random_access`.
+Mediremos el tiempo que tarda en acceder a cada uno de los elementos del arreglo. En el primer caso, accederemos secuencialmente (alta localidad) con la función `sequential_access`, y en el segundo caso, accederemos de manera aleatoria (baja localidad) con la función `random_access`.
 
 .. code-block:: python3
 
@@ -93,6 +93,9 @@ Mediremos el tiempo que tarda en acceder a los elementos del arreglo. En el prim
         end = time.time()
         
         return end - start
+
+Pruebas y resultados
+--------------------
 
 Tomaremos 10 mediciones para cada tipo de acceso y graficaremos los resultados en un diagrama de cajas.
 
