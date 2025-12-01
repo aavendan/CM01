@@ -68,10 +68,7 @@ El proceso se ilustra en la siguiente figura:
 Tipos de caché
 --------------
 
-1. **Caché de nivel 1 (L1)**: Es la caché más rápida y está integrada directamente en el procesador. Suele estar dividida en caché de instrucciones y caché de datos.
-2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
-3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
-4. **Caché de nivel 4 (L4)**: Es menos común y generalmente se encuentra en sistemas de alto rendimiento. Puede ser una caché externa que mejora aún más el rendimiento del sistema.
+El almacenamiento en caché es una tecnología basada en el subsistema de memoria de la computadora, que generalmente se organiza en varios niveles jerárquicos. Los niveles más comunes son:
 
 .. list-table::
    :header-rows: 1
@@ -92,13 +89,21 @@ Tipos de caché
      - Menos cercana y más lenta que L2, pero con mayor capacidad.
      - Pentium G4560: 3 MB compartidos  
        AMD EPYC 9754: 384 MB (32 MB por chiplet de 8 núcleos)
-   * - Caché L4
-     - Memoria poco habitual utilizada como apoyo para GPUs integradas.
-     - Core i5 5775C: 128 MB eDRAM como L4 (usada como buffer para Intel Iris Pro 6200)
 
+
+.. figure:: https://miro.medium.com/v2/resize:fit:750/format:webp/0*YcgYk__yJxbKTb0p.jpeg
+   :figwidth: 50%
+   :alt: Tipos de caché 
+
+   Fuente: `Demystifying CPU Caches with Examples <https://mecha-mind.medium.com/demystifying-cpu-caches-with-examples-810534628d71>`_.
+
+
+**Nota:** Algunos sistemas incluyen caché L4, que es aún más grande y lenta, pero menos común.
 
 Aplicaciones actuales
 ---------------------
+
+
 
 Demostración
 ============
@@ -187,3 +192,4 @@ Referencias
 * Ros, por I. (2024). Memoria caché: qué es y qué diferencias hay entre los tipos L1, L2, L3 y L4. Retrieved from https://www.muycomputer.com/2024/07/03/memoria-cache-que-es-y-que-diferencias-hay-entre-los-tipos-l1-l2-y-l3/
 * Castillo, J. A. (2022). Qué es la memoria caché L1, L2 y L3 y cómo funciona. Retrieved from https://www.profesionalreview.com/2019/05/02/memoria-cache-l1-l2-y-l3/
 * C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate. Available from: https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770 [accessed 1 Dec 2025]
+* Demystifying CPU Caches with Examples (2023). Retrieved from https://mecha-mind.medium.com/demystifying-cpu-caches-with-examples-810534628d71
