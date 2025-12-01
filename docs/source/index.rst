@@ -41,7 +41,7 @@ Los programas tienden seguir una regla empírica `90% del tiempo de ejecución u
 
     .. grid-item-card::  Localidad temporal 
 
-        Es probable que vuelva a acceder a ese **mismo elemento** un corto período de tiempo.
+        Es probable que vuelva a acceder a ese **mismo elemento** un corto tiempo.
 
     .. grid-item-card::  Localidad espacial
 
@@ -72,6 +72,30 @@ Tipos de caché
 2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
 3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
 4. **Caché de nivel 4 (L4)**: Es menos común y generalmente se encuentra en sistemas de alto rendimiento. Puede ser una caché externa que mejora aún más el rendimiento del sistema.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 55 30
+
+   * - Nivel de Caché
+     - Descripción
+     - Ejemplos
+   * - Caché L1
+     - Nivel más básico, más cercano al procesador y el más rápido. Es el que menos capacidad tiene.
+     - Pentium G4560: 64 KB (32 KB por núcleo)  
+       AMD EPYC 9654: 6 MB
+   * - Caché L2
+     - Nivel intermedio con equilibrio entre capacidad, cercanía y velocidad.
+     - Pentium G4560: 512 KB (256 KB por núcleo)  
+       AMD EPYC 9754: 96 MB (1 MB por núcleo)
+   * - Caché L3
+     - Menos cercana y más lenta que L2, pero con mayor capacidad.
+     - Pentium G4560: 3 MB compartidos  
+       AMD EPYC 9754: 384 MB (32 MB por chiplet de 8 núcleos)
+   * - Caché L4
+     - Memoria poco habitual utilizada como apoyo para GPUs integradas.
+     - Core i5 5775C: 128 MB eDRAM como L4 (usada como buffer para Intel Iris Pro 6200)
+
 
 Aplicaciones actuales
 ---------------------
