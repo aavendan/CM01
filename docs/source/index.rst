@@ -98,7 +98,7 @@ Tomaremos 10 mediciones para cada tipo de acceso y graficaremos los resultados e
 
 .. image:: ./archivos/comparacion.png
     :alt: Comparación de tiempos de acceso a memoria
-    :width: 75%
+    :width: 50%
     :align: center      
 
 Conclusiones
