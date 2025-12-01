@@ -41,18 +41,18 @@ Los programas tienden seguir una regla empírica `90% del tiempo de ejecución u
 
     .. grid-item-card::  Localidad temporal 
 
-        Es probable que vuelva a acceder a ese **mismo elemento**. Reutilización de datos en un corto período de tiempo.
+        Es probable que vuelva a acceder a ese **mismo elemento** un corto período de tiempo.
 
     .. grid-item-card::  Localidad espacial
 
-        Es probable que acceda a los **elementos cercanos**. Acceso a datos cercanos en la memoria.
+        Es probable que acceda a los **elementos cercanos** en la memoria.
 
 Funcionamiento de la caché
 --------------------------
 
-Cuando la CPU necesita leer o escribir datos, primero verifica si esos datos están en la caché *(cache hit)*. 
+Cuando la CPU necesita leer o escribir datos, verifica en la caché:
 
-* Si los datos están presentes, la CPU los utiliza directamente desde la caché, lo que es mucho más rápido. 
+* Si los datos están presentes *(cache hit)*, la CPU los utiliza directamente desde la caché. Lo cual, acelera la ejecución. 
 * Si los datos no están en la caché *(cache miss)*, la CPU debe recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD), lo que lleva más tiempo. Luego, esos datos se almacenan en la caché para futuros accesos. 
 
 
@@ -62,10 +62,16 @@ El proceso se ilustra en la siguiente figura:
    :figwidth: 50%
    :alt: Flowchart of a memory request showing cache hit and miss.
 
-   Fuente: `C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate <https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770>`_
+   Fuente: `C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate <https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770>`_.
+
 
 Tipos de caché
 --------------
+
+1. **Caché de nivel 1 (L1)**: Es la caché más rápida y está integrada directamente en el procesador. Suele estar dividida en caché de instrucciones y caché de datos.
+2. **Caché de nivel 2 (L2)**: Es más grande que la L1 y puede estar integrada en el procesador o ser una caché separada. Aunque es más lenta que la L1, sigue siendo mucho más rápida que la memoria principal.
+3. **Caché de nivel 3 (L3)**: Es compartida entre varios núcleos de procesador y es más grande pero más lenta que la L2. Su función es mejorar la eficiencia del acceso a datos entre los núcleos.
+4. **Caché de nivel 4 (L4)**: Es menos común y generalmente se encuentra en sistemas de alto rendimiento. Puede ser una caché externa que mejora aún más el rendimiento del sistema.
 
 Aplicaciones actuales
 ---------------------
