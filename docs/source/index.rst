@@ -29,7 +29,7 @@ Contenido
 ¿Qué es la memoria caché?
 -------------------------
 
-Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. Al tener estos datos cerca, la CPU puede acceder a ellos más rápidamente que si tuviera que recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD).
+Es una porción de memoria de alta velocidad que almacena temporalmente datos e instrucciones a los que el procesador (CPU) accede con frecuencia. 
 
 .. centered:: ¿Cuál es el criterio para almacenar cerca un dato o una instrucción?
 
@@ -55,10 +55,15 @@ Los programas tienden a acceder a los datos y las instrucciones en la memoria si
 Funcionamiento de la caché
 --------------------------
 
-.. raw:: html
+Cuando la CPU necesita leer o escribir datos, primero verifica si esos datos están en la caché *(cache hit)*. Si los datos están presentes, la CPU los utiliza directamente desde la caché, lo que es mucho más rápido. Si los datos no están en la caché *(cache miss)*, la CPU debe recuperarlos de la memoria principal (RAM) o del almacenamiento secundario (disco duro o SSD), lo que lleva más tiempo. Luego, esos datos se almacenan en la caché para futuros accesos. El proceso se ilustra en la siguiente figura:
 
-    <a href="https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770"><img src="https://www.researchgate.net/profile/Paul-Bilokon/publication/373822770/figure/fig2/AS:11431281187754656@1694402192962/Flowchart-of-a-memory-request-showing-cache-hit-and-miss.ppm" alt="Flowchart of a memory request showing cache hit and miss."/></a>
-    Figure 2: Flowchart of a memory request showing cache hit and miss.
+.. figure:: https://www.researchgate.net/profile/Paul-Bilokon/publication/373822770/figure/fig2/AS:11431281187754656@1694402192962/Flowchart-of-a-memory-request-showing-cache-hit-and-miss.ppm
+   :scale: 50 %
+   :alt: Flowchart of a memory request showing cache hit and miss.
+
+   Figura 1. Diagrama de flujo de una solicitud de memoria mostrando aciertos y fallos de caché. 
+   Fuente: [C++ Design Patterns for Low-latency Applications Including High-frequency Trading - Scientific Figure on ResearchGate](https://www.researchgate.net/figure/Flowchart-of-a-memory-request-showing-cache-hit-and-miss_fig2_373822770)
+
 
 Demostración
 ============
