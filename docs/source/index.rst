@@ -147,10 +147,10 @@ Realice las mediciones para diferente tamaños de muestras
 
     samples = # Ingrese el número de muestras, por ejemplo 10
     
-    #Agregue la llamada a la función con acceso secuencial a la lista
+    #Agregue la llamada a la función con acceso secuencial en la lista
     seq_times = [       for _ in range(samples)]
 
-    #Agregue la llamada a la función con acceso aleatorio a la lista
+    #Agregue la llamada a la función con acceso aleatorio en la lista
     rand_times = [      for _ in range(samples)]
 
 Resultados
@@ -161,8 +161,10 @@ Grafique los resultados en un diagrama de cajas.
 .. code-block:: python3
 
     # Graficar resultados
-    labels = ['Secuencial', 'Aleatorio']
-    data = [seq_times, rand_times]
+
+    # Agregue las etiquetas ('secuencial' y 'Aleatorio') y las listas ('seq_times' y 'rand_times') correspondientes.
+    labels = [ ]
+    data = [ ]
 
     plt.boxplot( data, labels=labels )
     plt.ylabel('Tiempo de acceso (segundos)')
