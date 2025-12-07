@@ -141,17 +141,17 @@ En el espacio virtual encontrará el _notebook_ con el siguiente código escrito
 Pruebas
 -------
 
-Realice las mediciones para diferente tamaños de muestras y 
+Realice las mediciones para diferente tamaños de muestras
 
 .. code-block:: python3
 
     samples = # Ingrese el número de muestras, por ejemplo 10
     
-    #Invoque a la función con acceso secuencial
-    seq_times = [          for _ in range(samples)]
+    #Agregue la llamada a la función con acceso secuencial a la lista
+    seq_times = [       for _ in range(samples)]
 
-    #Invoque a la función con acceso aleatorio
-    rand_times = [              for _ in range(samples)]
+    #Agregue la llamada a la función con acceso aleatorio a la lista
+    rand_times = [      for _ in range(samples)]
 
 Resultados
 ----------
