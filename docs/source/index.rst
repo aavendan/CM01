@@ -104,7 +104,7 @@ En la siguiente figura se ilustran los diferentes niveles de caché en relación
 Actividad práctica
 ==================
 
-Utilice el siguiente código en Python para observar el impacto de la localidad en el rendimiento del acceso a memoria.
+En el espacio virtual encontrará el siguiente escrito en Python. Observe el impacto del acceso por localidad espacial en el rendimiento del programa.
 
 .. code-block:: python3
 
@@ -113,7 +113,7 @@ Utilice el siguiente código en Python para observar el impacto de la localidad 
     import matplotlib.pyplot as plt 
 
     # Tamaño del arreglo grande (N=10,000,000) de enteros
-    N = 10_000_000
+    N = # Ingrese el tamaño del arreglo aquí, por ejemplo 10_000_000
     a = np.zeros(N, dtype=np.int32)
 
     # Accederemos secuencialmente (alta localidad) a cada elemento del arreglo
@@ -178,7 +178,7 @@ Actividad autónoma
 1. Revise el sitio de `Información general sobre el almacenamiento en caché <https://aws.amazon.com/es/caching/>`_.
 2. Seleccione un servicio de almacenamiento en caché ofrecido por AWS (por ejemplo, Amazon ElastiCache).
 3. Elabore un mapa conceptual resumiendo las características, beneficios y casos de uso del servicio seleccionado.
-4. Presente sus conclusiones en el foro de discusión de la semana.
+4. En el espacio virtual, presente sus conclusiones en el foro de discusión de la semana.
 
 Referencias
 ===========
