@@ -104,7 +104,7 @@ En la siguiente figura se ilustran los diferentes niveles de caché en relación
 Actividad práctica
 ==================
 
-En el espacio virtual encontrará el siguiente escrito en Python. Observe el impacto del acceso por localidad espacial en el rendimiento del programa.
+En el espacio virtual encontrará el _notebook_ con el siguiente código escrito en Python. Analice el impacto del acceso por localidad espacial en el rendimiento del programa.
 
 .. code-block:: python3
 
@@ -112,7 +112,6 @@ En el espacio virtual encontrará el siguiente escrito en Python. Observe el imp
     import numpy as np
     import matplotlib.pyplot as plt 
 
-    # Tamaño del arreglo grande (N=10,000,000) de enteros
     N = # Ingrese el tamaño del arreglo aquí, por ejemplo 10_000_000
     a = np.zeros(N, dtype=np.int32)
 
@@ -139,27 +138,39 @@ En el espacio virtual encontrará el siguiente escrito en Python. Observe el imp
         
         return end - start
 
-Pruebas y resultados
---------------------
+Pruebas
+-------
 
-Realice las mediciones para diferente tamaños de muestras y grafique los resultados en un diagrama de cajas.
+Realice las mediciones para diferente tamaños de muestras y 
 
 .. code-block:: python3
 
-    # Número de muestras
-    samples = # Ingrese el número de muestras aquí
+    samples = # Ingrese el número de muestras, por ejemplo 10
     
-    # Medición de tiempos de acceso secuencial
-    seq_times = [sequential_access() for _ in range(samples)]
-    rand_times = [random_access() for _ in range(samples)]
+    #Invoque a la función con acceso secuencial
+    seq_times = [          for _ in range(samples)]
+
+    #Invoque a la función con acceso aleatorio
+    rand_times = [              for _ in range(samples)]
+
+Resultados
+----------
+
+Grafique los resultados en un diagrama de cajas.
+
+.. code-block:: python3
 
     # Graficar resultados
-    plt.boxplot([seq_times, rand_times], labels=['Secuencial', 'Aleatorio'])
+    labels = ['Secuencial', 'Aleatorio']
+    data = [seq_times, rand_times]
+
+    plt.boxplot( data, labels=labels )
     plt.ylabel('Tiempo de acceso (segundos)')
     plt.title('Comparación de tiempos de acceso a memoria')
     plt.show()
 
-En el gráfico resultante, podemos observar la diferencia significativa en los tiempos de acceso entre los dos métodos.
+
+En el gráfico, analice la diferencia significativa en los tiempos de acceso entre los dos métodos.
 
 .. figure:: ./archivos/comparacion.png
     :alt: Comparación de tiempos de acceso a memoria
